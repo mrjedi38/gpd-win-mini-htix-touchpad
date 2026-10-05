@@ -6,7 +6,7 @@ The service runs only while `gamescope-session.target` is active. KDE/Desktop Mo
 
 ## Why this exists
 
-On the tested GPD Win Mini 2025, the HTIX5288 works as a normal touchpad in KDE, but Gaming Mode does not reliably produce mouse clicks from it. Movement may work while tap-to-click does not.
+On the tested GPD Win Mini 2025 (Ryzen™7 8840U version), the HTIX5288 works as a normal touchpad in KDE, but Gaming Mode does not reliably produce mouse clicks from it. Movement may work while tap-to-click does not.
 
 This project reads the multitouch event interface and creates `HTIX5288 Virtual Mouse` through Linux uinput.
 
