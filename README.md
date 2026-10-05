@@ -196,10 +196,6 @@ Common problems:
 
 Do not add a global `LIBINPUT_IGNORE_DEVICE=1` rule for the physical HTIX5288 if you want the original touchpad to work in Desktop Mode.
 
-## Polski skrót
-
-Mod naprawia obsługę kliknięć touchpada HTIX5288 w Gaming Mode na GPD Win Mini 2025. Wirtualna mysz działa tylko podczas sesji Gamescope. Po przejściu do KDE usługa zatrzymuje się i system ponownie korzysta z oryginalnego touchpada.
-
 ## License
 
 MIT. See [LICENSE](LICENSE).
