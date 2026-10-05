@@ -1,0 +1,14 @@
+[Unit]
+Description=HTIX5288 virtual mouse for Gamescope Gaming Mode
+PartOf=gamescope-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=@PYTHON@ @SCRIPT@
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=3
+
+[Install]
+WantedBy=gamescope-session.target
