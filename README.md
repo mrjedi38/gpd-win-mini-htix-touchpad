@@ -37,6 +37,7 @@ HTIX5288 multitouch events
 - right-button hold with two fingers
 - protection against cursor jumps after finger-count changes
 - automatic event-device discovery; no hardcoded `/dev/input/eventX`
+- exclusive capture of the physical multitouch interface in Gaming Mode, preventing Gamescope from processing the same motion twice
 - automatic start and stop with Gaming Mode
 
 ## Tested setup
@@ -143,7 +144,7 @@ inactive
 The main settings are near the top of `src/htix-touchpad.py`:
 
 ```python
-SENSITIVITY = 0.75
+SENSITIVITY = 0.55
 DEADZONE = 2
 SMOOTH = 4
 MAX_POINTER_DELTA = 180

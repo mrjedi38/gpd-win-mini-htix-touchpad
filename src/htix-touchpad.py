@@ -52,8 +52,15 @@ def find_device():
 
 src = find_device()
 
+try:
+    src.grab()
+except OSError as exc:
+    raise RuntimeError(
+        f"Could not exclusively grab {src.path}: {exc}"
+    ) from exc
+
 print(
-    f"Running on {src.path}: {src.name}",
+    f"Running exclusively on {src.path}: {src.name}",
     flush=True
 )
 
@@ -93,7 +100,7 @@ ui = UInput(
 # SETTINGS
 # ======================================================
 
-SENSITIVITY = 0.75
+SENSITIVITY = 0.55
 
 DEADZONE = 2
 

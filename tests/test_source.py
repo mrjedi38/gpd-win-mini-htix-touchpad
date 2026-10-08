@@ -38,6 +38,10 @@ class SourceTests(unittest.TestCase):
         self.assertIn("e.BTN_MIDDLE", SOURCE)
         self.assertIn("gesture_fingers == 3", SOURCE)
 
+    def test_exclusively_grabs_physical_multitouch_interface(self):
+        self.assertIn("src.grab()", SOURCE)
+        self.assertIn("Running exclusively on", SOURCE)
+
     def test_hold_is_deliberate(self):
         self.assertGreaterEqual(assigned_number("HOLD_TIME"), 0.9)
         self.assertIn("gesture_total_move + pending_move < HOLD_DISTANCE", SOURCE)
